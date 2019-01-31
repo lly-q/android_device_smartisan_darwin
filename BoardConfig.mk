@@ -49,6 +49,7 @@ TW_INCLUDE_REPACKTOOLS := true
 BOARD_AVB_ENABLE := true
 
 # Crypto
+TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Kernel
