@@ -20,3 +20,6 @@
 
 # Logic data
 /data           ext4    /dev/block/logic_data                       flags=encryptable=footer;length=-16384
+
+# Removable storage
+/usb-otg        vfat    /dev/block/sdg1         /dev/block/sdg      flags=storage;wipeingui;removable
