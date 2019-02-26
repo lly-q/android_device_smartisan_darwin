@@ -36,3 +36,15 @@ on property:ro.boot.usbcontroller=*
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+on boot
+    setprop sys.usb.config adb
+
+on property:sys.usb.config=mtp,adb
+    restart time_daemon
+
+service time_daemon /sbin/time_daemon
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
