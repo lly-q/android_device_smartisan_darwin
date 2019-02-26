@@ -39,12 +39,3 @@ on fs
 
 on boot
     setprop sys.usb.config adb
-
-on property:sys.usb.config=mtp,adb
-    restart time_daemon
-
-service time_daemon /sbin/time_daemon
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0
