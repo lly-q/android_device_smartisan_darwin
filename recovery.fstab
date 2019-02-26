@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /system         ext4     system                                     flags=display=system;logical;slotselect
 /system_ext     ext4     system_ext                                 flags=display=system_ext;logical;slotselect
 /product        ext4     product                                    flags=display=product;logical;slotselect
@@ -8,3 +9,14 @@
 /sdcard         vfat     /dev/block/mmcblk0p1                       flags=display=sdcard
 /boot           emmc     /dev/block/bootdevice/by-name/boot         flags=display=boot
 /misc           emmc     /dev/block/bootdevice/by-name/misc         flags=display=misc
+=======
+# mount point   fstype  device                  device2             flags
+/boot           emmc    /dev/block/bootdevice/by-name/boot          flags=slotselect
+/system         ext4    /dev/block/bootdevice/by-name/system        flags=slotselect
+/system_image   emmc    /dev/block/bootdevice/by-name/system        flags=slotselect
+/vendor         ext4    /dev/block/bootdevice/by-name/vendor        flags=slotselect;backup=1
+/vendor_image   emmc    /dev/block/bootdevice/by-name/vendor        flags=slotselect
+/misc           emmc    /dev/block/bootdevice/by-name/misc
+
+# Logic data
+/data           ext4    /dev/block/logic_data                       flags=encryptable=footer;length=-16384
