@@ -37,8 +37,15 @@ on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    exec -- /sbin/logic_volume -f /etc/logic_volume.conf
+    start logic_volume
     wait /dev/block/logic_data
 
 on boot
     setprop sys.usb.config adb
+
+service logic_volume /sbin/logic_volume -f /etc/logic_volume.conf
+    disabled
+    oneshot
+    user root
+    group root
+    seclabel u:r:recovery:s0
