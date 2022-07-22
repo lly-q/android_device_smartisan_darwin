@@ -13,19 +13,19 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-# Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.0-service \
+    android.hardware.boot@1.0-impl-qti.recovery \
+    bootctrl.darwin \
+    bootctrl.darwin.recovery
 
 PRODUCT_PACKAGES += \
-    bootctrl.kona
+    bootctrl.darwin
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.kona \
-    libgptutils \
-    libz \
-    libcutils
+#PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+#   libgptutils \
+#   libz \
+#   libcutils
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -33,3 +33,4 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
