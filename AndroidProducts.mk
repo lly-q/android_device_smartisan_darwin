@@ -6,9 +6,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_darwin.mk
+    $(LOCAL_DIR)/twrp_darwin.mk
 
-COMMON_LUNCH_CHOICES := \
-    omni_darwin-user \
-    omni_darwin-userdebug \
-    omni_darwin-eng
