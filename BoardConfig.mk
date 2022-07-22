@@ -30,7 +30,7 @@ TARGET_OTA_ASSERT_DEVICE := darwin
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
-#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600 # This is the maximum known partition size, but it can be higher, so we just omit it
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 167772160 # This is the maximum known partition size, but it can be higher, so we just omit it
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -67,14 +67,15 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/deltainno/darwin
-TARGET_KERNEL_CONFIG := darwin_defconfig
+#TARGET_KERNEL_CONFIG := darwin_defconfig
 
 # Platform
-TARGET_BOARD_PLATFORM := kona
+TARGET_BOARD_PLATFORM := darwin
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+#
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
