@@ -5,6 +5,4 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-add_lunch_combo omni_darwin-user
-add_lunch_combo omni_darwin-userdebug
-add_lunch_combo omni_darwin-eng
+
