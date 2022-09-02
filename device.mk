@@ -24,15 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 LOCAL_PATH := device/deltainno/darwin
-# A/B
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=ext4 \
-    POSTINSTALL_OPTIONAL_system=true
 
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-service \
-    android.hardware.boot@1.0-impl-qti.recovery \
-    bootctrl.darwin \
-    bootctrl.darwin.recovery
+    bootctrl.smartisan_sm8250.recovery \
+    android.hardware.boot@1.1-impl-qti.recovery
