@@ -36,19 +36,3 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl-qti.recovery \
     bootctrl.darwin \
     bootctrl.darwin.recovery
-
-PRODUCT_PACKAGES += \
-    bootctrl.darwin
-
-#PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-#   libgptutils \
-#   libz \
-#   libcutils
-
-PRODUCT_PACKAGES += \
-    otapreopt_script \
-    cppreopts.sh \
-    update_engine \
-    update_verifier \
-    update_engine_sideload
-
