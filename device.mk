@@ -28,3 +28,9 @@ LOCAL_PATH := device/deltainno/darwin
 PRODUCT_PACKAGES += \
     bootctrl.smartisan_sm8250.recovery \
     android.hardware.boot@1.1-impl-qti.recovery
+
+# SHIPPING API
+PRODUCT_SHIPPING_API_LEVEL := 30
+
+# VNDK API
+PRODUCT_TARGET_VNDK_VERSION := 31
