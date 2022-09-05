@@ -29,11 +29,12 @@ PRODUCT_PACKAGES += \
     bootctrl.smartisan_sm8250.recovery \
     android.hardware.boot@1.1-impl-qti.recovery
 
+PRODUCT_PACKAGES += \
+    fastbootd \
+    android.hardware.fastboot@1.0-impl-mock
+
 # SHIPPING API
 PRODUCT_SHIPPING_API_LEVEL := 30
-
-# VNDK API
-PRODUCT_TARGET_VNDK_VERSION := 31
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
